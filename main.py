@@ -14,13 +14,13 @@ def lotto (l):
 # CLI
 print("Witamy w generatorze liczb lotto!")
 lenght = int(input("Ile cyfr chcesz wylosować? "))
-if lenght <= 0:
+if lenght <= 0: # Unexpected value handler
     print("Niepoprawna wartość, spróbuj ponownie.")
-elif lenght > 10000:
+elif lenght > 10000: # Warning about large numbers
     print("Proszę czekać, generowanie numerów (to potrwa chwilę)......")
     print(* lotto(lenght))
-else:
-    print("Proszę czekać, generowanie numerów")
-    time.sleep(random.uniform(1, 10)) 
+else: # Default option
+    print("Proszę czekać, generowanie numerów") 
+    time.sleep(random.uniform(1, 10)) # Builds anticipation ;)
     print(* lotto(lenght))
 
